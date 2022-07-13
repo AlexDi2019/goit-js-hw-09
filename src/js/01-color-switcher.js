@@ -9,7 +9,7 @@ stopBtn.addEventListener('click', onStopBtnChangeBgColor);
 
 function onStartBtnChangeBgColor() {
     timerId = setInterval(() => {
-    body.style = `background-color: ${getRandomHexColor()}`;
+        body.style = `background-color: ${getRandomHexColor()}`;
     }, 1000);
     startBtn.setAttribute("disabled", true);
     stopBtn.removeAttribute("disabled");
@@ -22,5 +22,5 @@ function onStopBtnChangeBgColor() {
 }
 
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }

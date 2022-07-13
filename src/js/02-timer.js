@@ -83,3 +83,10 @@ function convertMs(ms) {
 
     return { days, hours, minutes, seconds };
 }
+
+function updateTimerValues({ days, hours, minutes, seconds }) {
+    refs.days.textContent = addZero(days);
+    refs.hours.textContent = addZero(hours);
+    refs.minutes.textContent = addZero(minutes);
+    refs.seconds.textContent = addZero(seconds);
+};

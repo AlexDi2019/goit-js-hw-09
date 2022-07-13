@@ -57,14 +57,5 @@
         "posthtml-include": "^1.7.4"
 
     },
-
-    "alias": {
-
-        "process": false
-
-    },
-
     "browserslist": "> 0.5%, last 2 versions, not dead"
-
 }
-

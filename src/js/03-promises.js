@@ -1,8 +1,6 @@
-import axios from 'axios';
-console.log(axios)
-import {
-    Notify
-} from 'notiflix/build/notiflix-notify-aio';
+import
+Notify
+from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
     form: document.querySelector('.form'),

@@ -1,7 +1,6 @@
-import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.min.css";
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
 
 const refs = {
     dateInput: document.querySelector('#datetime-picker'),
@@ -21,12 +20,12 @@ const options = {
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose(selectedDates) {
-    if (selectedDates[0].getTime() - Date.now() <= 0) {
-        Notify.failure('Please choose a date in the future');
-        refs.startBtn.disabled = true;
-    } else {
-        refs.startBtn.disabled = false;
-    }
+        if (selectedDates[0].getTime() - Date.now() <= 0) {
+            Notify.failure('Please choose a date in the future');
+            refs.startBtn.disabled = true;
+        } else {
+            refs.startBtn.disabled = false;
+        }
     },
 };
 
@@ -35,7 +34,7 @@ const flp = flatpickr(refs.dateInput, options);
 function onStartBtnClick() {
     refs.startBtn.disabled = true;
     refs.dateInput.disabled = true;
-    
+
     onCount();
 }
 
@@ -45,9 +44,9 @@ function onCount() {
         const conTime = convertMs(flp.selectedDates[0] - Date.now());
         setTime(conTime);
         console.log(pick);
-        if(pick < 1000) {
+        if (pick < 1000) {
             clearInterval(countTime);
-            Notify.success('Timer countdown finished')
+            Notify.success('Timer countdown finished');
         }
     }, 1000);
 }
@@ -60,7 +59,7 @@ function setTime({ days, hours, minutes, seconds }) {
 }
 
 function addLeadingZero(value) {
-    return String(value).padStart(2, "0");
+    return String(value).padStart(2, '0');
 }
 
 function convertMs(ms) {

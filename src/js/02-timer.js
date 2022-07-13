@@ -1,6 +1,11 @@
+import axios from 'axios';
+console.log(axios)
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import {
+    Notify
+}
+from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
     dateInput: document.querySelector('#datetime-picker'),
